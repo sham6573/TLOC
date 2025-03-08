@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1sagunj6rrkb"
-path="res://.godot/imported/testCharcter1.png-007318382014c8449fcf3933178187db.ctex"
+path="res://.godot/imported/testCharcter1.png-5a56edb2eb9a4ec4fcccafc18171d513.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/testCharcter1.png"
-dest_files=["res://.godot/imported/testCharcter1.png-007318382014c8449fcf3933178187db.ctex"]
+source_file="res://Assets/sprites/testCharcter1.png"
+dest_files=["res://.godot/imported/testCharcter1.png-5a56edb2eb9a4ec4fcccafc18171d513.ctex"]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
-compress/channel_pack=0
+compress/channel_pack=1
 mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
