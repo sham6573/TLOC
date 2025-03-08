@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://3d614o4gf07t"]
 
-[ext_resource type="Texture2D" uid="uid://bkgld25gi2smu" path="res://Assets/icon.svg" id="1_o6eob"]
+[ext_resource type="Texture2D" uid="uid://bkgld25gi2smu" path="res://assets/icon.svg" id="1_o6eob"]
 [ext_resource type="Script" uid="uid://b4dhp677mlv0t" path="res://scripts/sprite_2d.gd" id="2_v0dg5"]
 
 [node name="Node2D" type="Node2D"]
