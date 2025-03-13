@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cnengqr02m37u"]
+[gd_scene load_steps=4 format=3 uid="uid://cnengqr02m37u"]
 
 [ext_resource type="Script" uid="uid://b7j0awdpl74c5" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://d1sagunj6rrkb" path="res://Assets/sprites/testCharcter1.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://d1sagunj6rrkb" path="res://assets/sprites/testCharcter1.png" id="2_qhqgy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
+radius = 156.003
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
@@ -10,7 +13,7 @@ script = ExtResource("1_g2els")
 rotation = 1.5708
 texture = ExtResource("2_qhqgy")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+[node name="Hitbox" type="CollisionPolygon2D" parent="."]
 rotation = 1.5708
 polygon = PackedVector2Array(-9, -26, -12, -17, -3, -8, -19, -6, -19, -2, -4, 2, -6, 30, 3, 31, 7, 28, 6, 13, 4, 7, 4, 0, 19, 0, 19, -5, 19, -7, 3, -7, 8, -11, 12, -17, 12, -20, 6, -29, -1, -31)
 
@@ -20,5 +23,11 @@ one_shot = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(4, 17)
+rotation = 1.5708
+
+[node name="PlayerRegion" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRegion"]
+shape = SubResource("CircleShape2D_g2els")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
