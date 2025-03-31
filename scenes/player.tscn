@@ -4,10 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://d1sagunj6rrkb" path="res://assets/sprites/testCharcter1.png" id="2_qhqgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
-radius = 156.003
+radius = 295.0
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotation = 1.5708
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 rotation = 1.5708

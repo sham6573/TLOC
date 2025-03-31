@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 func movement(_delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * speed
-	look_at(get_global_mouse_position())
+	#look_at(get_global_mouse_position())
 	# allows player to be in direction the mouse is in 
 	move_and_slide()
 
