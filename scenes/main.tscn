@@ -9,12 +9,12 @@ script = ExtResource("1_0wfyh")
 
 [node name="Node2D" parent="." instance=ExtResource("2_sugp2")]
 
-[node name="Player" parent="." instance=ExtResource("1_o5qli")]
+[node name="Player" parent="Node2D" instance=ExtResource("1_o5qli")]
 position = Vector2(-25, 72)
 
 [node name="Projectiles" type="Node2D" parent="."]
 
 [node name="Prompt" type="Node2D" parent="."]
 
-[connection signal="orb" from="Player" to="." method="_on_player_orb"]
-[connection signal="prompt" from="Player" to="." method="_on_player_prompt"]
+[connection signal="orb" from="Node2D/Player" to="." method="_on_player_orb"]
+[connection signal="prompt" from="Node2D/Player" to="." method="_on_player_prompt"]

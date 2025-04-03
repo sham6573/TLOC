@@ -2,10 +2,16 @@ extends CharacterBody2D
 
 const speed: int = 250
 # constant speed for player
+
+@export var inventory: Inventory
+# player's inventory
+
 var can_attack: bool = true
 # a control boolean 
+
 signal orb(pos, dir)
 # a signal to commuicate with orb scene to instancate an orb 
+
 signal prompt
 # a signal to emit to create an prompt screen
 

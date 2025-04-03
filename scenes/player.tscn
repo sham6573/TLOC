@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnengqr02m37u"]
+[gd_scene load_steps=5 format=3 uid="uid://cnengqr02m37u"]
 
 [ext_resource type="Script" uid="uid://b7j0awdpl74c5" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://d1sagunj6rrkb" path="res://assets/sprites/testCharcter1.png" id="2_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://ky8opfc2wbjv" path="res://scenes/inventory_ui.tscn" id="3_qhqgy"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
 radius = 295.0
@@ -13,11 +14,9 @@ script = ExtResource("1_g2els")
 rotation = 1.5708
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = 1.5708
 texture = ExtResource("2_qhqgy")
 
 [node name="Hitbox" type="CollisionPolygon2D" parent="."]
-rotation = 1.5708
 polygon = PackedVector2Array(-9, -26, -12, -17, -3, -8, -19, -6, -19, -2, -4, 2, -6, 30, 3, 31, 7, 28, 6, 13, 4, 7, 4, 0, 19, 0, 19, -5, 19, -7, 3, -7, 8, -11, 12, -17, 12, -20, 6, -29, -1, -31)
 
 [node name="Timer" type="Timer" parent="."]
@@ -32,5 +31,11 @@ rotation = 1.5708
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRegion"]
 shape = SubResource("CircleShape2D_g2els")
+
+[node name="Inventory_UI" parent="." instance=ExtResource("3_qhqgy")]
+offset_left = -141.0
+offset_top = -162.0
+offset_right = -52.0
+offset_bottom = -87.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
