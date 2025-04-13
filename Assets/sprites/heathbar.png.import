@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0mewbvhixkrh"
-path="res://.godot/imported/invbox.png-fb261071ae28b6976c9e94b66d0ed7f2.ctex"
+uid="uid://bwic4mm1k8hb7"
+path="res://.godot/imported/heathbar.png-3eb0a665fe3710f9719765676bb1f5f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/invbox.png"
-dest_files=["res://.godot/imported/invbox.png-fb261071ae28b6976c9e94b66d0ed7f2.ctex"]
+source_file="res://assets/sprites/heathbar.png"
+dest_files=["res://.godot/imported/heathbar.png-3eb0a665fe3710f9719765676bb1f5f7.ctex"]
 
 [params]
 

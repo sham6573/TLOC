@@ -1,0 +1,66 @@
+[gd_scene load_steps=4 format=3 uid="uid://ky8opfc2wbjv"]
+
+[ext_resource type="Script" uid="uid://vas227227ud3" path="res://scripts/inventory/inventory_ui.gd" id="1_8ojme"]
+[ext_resource type="Texture2D" uid="uid://bj5bqoy51ecb" path="res://assets/sprites/inventory.png" id="2_mme0t"]
+[ext_resource type="PackedScene" uid="uid://cohojrmg7wulb" path="res://scenes/inventory/inventory_slot.tscn" id="3_iy21j"]
+
+[node name="Inventory_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -20.0
+offset_right = 189.0
+offset_bottom = 125.0
+script = ExtResource("1_8ojme")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_left = 74.0
+offset_right = 208.0
+offset_bottom = 122.0
+texture = ExtResource("2_mme0t")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -58.0
+offset_right = 58.0
+offset_bottom = 58.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 3
+
+[node name="Panel" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iy21j")]
+layout_mode = 2
+
+[node name="Panel2" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iy21j")]
+layout_mode = 2
+
+[node name="Panel3" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iy21j")]
+layout_mode = 2
+
+[node name="Panel4" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iy21j")]
+layout_mode = 2
+
+[node name="Panel5" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iy21j")]
+layout_mode = 2
+
+[node name="Panel6" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iy21j")]
+layout_mode = 2
+
+[node name="Panel7" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iy21j")]
+layout_mode = 2
+
+[node name="Panel8" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iy21j")]
+layout_mode = 2
+
+[node name="Panel9" parent="NinePatchRect/GridContainer" instance=ExtResource("3_iy21j")]
+layout_mode = 2

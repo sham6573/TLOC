@@ -23,7 +23,6 @@ func _process(delta: float) -> void:
 func movement(_delta: float) -> void:
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * speed
-	#look_at(get_global_mouse_position())
 	# allows player to be in direction the mouse is in 
 	move_and_slide()
 
@@ -40,3 +39,6 @@ func check_if_shooting() -> void:
 # runs when timer runs out 
 func _on_timer_timeout() -> void:
 	can_attack = true 
+
+func collect(item):
+	inventory.insert(item)

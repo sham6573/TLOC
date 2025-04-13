@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://br5xdquntdqie"]
+
+[ext_resource type="PackedScene" uid="uid://ky8opfc2wbjv" path="res://scenes/inventory/inventory_ui.tscn" id="1_rlh32"]
+[ext_resource type="PackedScene" uid="uid://du17p34umeixm" path="res://scenes/healthbar.tscn" id="2_mwd4w"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Inventory_UI" parent="." instance=ExtResource("1_rlh32")]
+offset_left = -147.0
+offset_top = -159.0
+offset_right = 62.0
+offset_bottom = -34.0
+
+[node name="Control" parent="." instance=ExtResource("2_mwd4w")]
+layout_mode = 1
