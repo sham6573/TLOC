@@ -1,54 +1,9 @@
-[gd_resource type="Resource" script_class="Inventory" load_steps=12 format=3 uid="uid://w4vr3rt6vx8t"]
+[gd_resource type="Resource" script_class="Inventory" load_steps=3 format=3 uid="uid://w4vr3rt6vx8t"]
 
-[ext_resource type="Script" uid="uid://ohsf7b064nqg" path="res://scripts/inventory/inv_slot.gd" id="2_6xhtq"]
-[ext_resource type="Script" uid="uid://bddhcawgm32am" path="res://scripts/inventory/inventory.gd" id="2_br4r5"]
-
-[sub_resource type="Resource" id="Resource_6xhtq"]
-script = ExtResource("2_6xhtq")
-amount = 0
-metadata/_custom_type_script = "uid://ohsf7b064nqg"
-
-[sub_resource type="Resource" id="Resource_br4r5"]
-script = ExtResource("2_6xhtq")
-amount = 0
-metadata/_custom_type_script = "uid://ohsf7b064nqg"
-
-[sub_resource type="Resource" id="Resource_ks4up"]
-script = ExtResource("2_6xhtq")
-amount = 0
-metadata/_custom_type_script = "uid://ohsf7b064nqg"
-
-[sub_resource type="Resource" id="Resource_h1vug"]
-script = ExtResource("2_6xhtq")
-amount = 0
-metadata/_custom_type_script = "uid://ohsf7b064nqg"
-
-[sub_resource type="Resource" id="Resource_vkm0j"]
-script = ExtResource("2_6xhtq")
-amount = 0
-metadata/_custom_type_script = "uid://ohsf7b064nqg"
-
-[sub_resource type="Resource" id="Resource_3qven"]
-script = ExtResource("2_6xhtq")
-amount = 0
-metadata/_custom_type_script = "uid://ohsf7b064nqg"
-
-[sub_resource type="Resource" id="Resource_rk57f"]
-script = ExtResource("2_6xhtq")
-amount = 0
-metadata/_custom_type_script = "uid://ohsf7b064nqg"
-
-[sub_resource type="Resource" id="Resource_ccamj"]
-script = ExtResource("2_6xhtq")
-amount = 0
-metadata/_custom_type_script = "uid://ohsf7b064nqg"
-
-[sub_resource type="Resource" id="Resource_k6uc5"]
-script = ExtResource("2_6xhtq")
-amount = 0
-metadata/_custom_type_script = "uid://ohsf7b064nqg"
+[ext_resource type="Script" uid="uid://ducsmsudfaqt0" path="res://scripts/inventory_item.gd" id="1_6xhtq"]
+[ext_resource type="Script" uid="uid://bddhcawgm32am" path="res://scripts/inventory.gd" id="2_br4r5"]
 
 [resource]
 script = ExtResource("2_br4r5")
-slots = Array[ExtResource("2_6xhtq")]([SubResource("Resource_6xhtq"), SubResource("Resource_br4r5"), SubResource("Resource_ks4up"), SubResource("Resource_h1vug"), SubResource("Resource_vkm0j"), SubResource("Resource_3qven"), SubResource("Resource_rk57f"), SubResource("Resource_ccamj"), SubResource("Resource_k6uc5")])
+items = Array[ExtResource("1_6xhtq")]([])
 metadata/_custom_type_script = "uid://bddhcawgm32am"

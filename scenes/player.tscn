@@ -5,8 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://d1sagunj6rrkb" path="res://assets/sprites/testCharcter1.png" id="2_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://br5xdquntdqie" path="res://scenes/user_display.tscn" id="3_qhqgy"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_g2els"]
-radius = 295.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_dqkch"]
+radius = 223.271
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
@@ -18,22 +18,26 @@ rotation = 1.5708
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_qhqgy")
 
-[node name="Hitbox" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-9, -26, -12, -17, -3, -8, -19, -6, -19, -2, -4, 2, -6, 30, 3, 31, 7, 28, 6, 13, 4, 7, 4, 0, 19, 0, 19, -5, 19, -7, 3, -7, 8, -11, 12, -17, 12, -20, 6, -29, -1, -31)
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(4, 17)
+rotation = 1.5708
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -30, 0, -30, -3, -30, -6, -28, -10, -22, -10, -16, -8, -14, -6, -12, -2, -10, -2, -6, -18, -6, -18, -2, -2, -2, -2, 13, -5, 13, -5, 30, -1, 30, -1, 16, 1, 16, 1, 30, 5, 30, 5, 13, 2, 13, 2, -2, 18, -2, 18, -6, 2, -6, 4, -11, 6, -12, 8, -14, 10, -18, 10, -22, 8, -26, 6, -28, 2, -30)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(4, 17)
-rotation = 1.5708
-
-[node name="PlayerRegion" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerRegion"]
-shape = SubResource("CircleShape2D_g2els")
-
 [node name="user_display" parent="." instance=ExtResource("3_qhqgy")]
+offset_left = 11.0
+offset_top = -50.0
+offset_right = 51.0
+offset_bottom = -10.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dqkch")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
