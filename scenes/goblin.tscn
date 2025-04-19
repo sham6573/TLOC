@@ -13,12 +13,13 @@ script = ExtResource("1_4yait")
 texture = ExtResource("2_4yait")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(1, -22, 4, -22, 4, -21, 7, -21, 7, -22, 10, -22, 10, -21, 11, -21, 11, -20, 11, -18, 9, -16, 3, -10, 4, -10, 4, -8, 6, -7, 6, 10, 4, 13, 4, 21, 2, 22, -4, 22, -6, 20, -6, 19, -4, 19, -4, 18, -1, 18, -1, 13, -3, 12, -5, 9, -5, 1, -9, 0, -10, -1, -10, -4, -8, -4, -7, -4, -4, -4, -4, -11, -10, -12, -11, -13, -11, -14, -10, -16, -8, -16, -3, -22)
+polygon = PackedVector2Array(1, -26, 4, -26, 7, -26, 7, -21, 7, -22, 11, -26, 10, -21, 12, -22, 11, -20, 11, -18, 12, -11, 3, -10, 12, -11, 9, -9, 10, -7, 11, 12, 7, 15, 7, 23, 1, 25, -8, 24, -10, 18, -9, 16, -4, 19, -9, 16, -9, 12, -1, 13, -3, 12, -9, 10, -5, 1, -9, 2, -11, 1, -16, -4, -8, -4, -7, -4, -4, -4, -6, -9, -11, -10, -14, -11, -14, -14, -13, -19, -9, -21, -3, -26)
 
 [node name="Area2D" type="Area2D" parent="."]
 priority = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(2, 0)
 shape = SubResource("CircleShape2D_4yait")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

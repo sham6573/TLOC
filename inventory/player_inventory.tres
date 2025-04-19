@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Inv" load_steps=6 format=3 uid="uid://c3m5t40f6pqn5"]
+
+[ext_resource type="Script" uid="uid://m2uedcawj28w" path="res://inventory/inventory_item.gd" id="1_ptr4k"]
+[ext_resource type="Resource" uid="uid://du5eng0u1jecr" path="res://inventory/items/stick.tres" id="2_ptr4k"]
+[ext_resource type="Script" uid="uid://cy5h1c574b72h" path="res://inventory/inventory.gd" id="3_65xq6"]
+[ext_resource type="Resource" uid="uid://c6krdrpsaqjdm" path="res://inventory/items/fire_staff.tres" id="3_fi1x0"]
+[ext_resource type="Resource" uid="uid://b64ql7bgeybf8" path="res://inventory/items/ice_staff.tres" id="4_65xq6"]
+
+[resource]
+script = ExtResource("3_65xq6")
+items = Array[ExtResource("1_ptr4k")]([ExtResource("2_ptr4k"), ExtResource("3_fi1x0"), ExtResource("4_65xq6"), null, null, null, null, null, null])
+metadata/_custom_type_script = "uid://cy5h1c574b72h"

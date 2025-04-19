@@ -1,16 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://cnengqr02m37u"]
 
 [ext_resource type="Script" uid="uid://b7j0awdpl74c5" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Resource" uid="uid://w4vr3rt6vx8t" path="res://items/player_inventory.tres" id="2_dqkch"]
+[ext_resource type="Resource" uid="uid://c3m5t40f6pqn5" path="res://inventory/player_inventory.tres" id="2_dqkch"]
 [ext_resource type="Texture2D" uid="uid://d1sagunj6rrkb" path="res://assets/sprites/testCharcter1.png" id="2_qhqgy"]
-[ext_resource type="PackedScene" uid="uid://br5xdquntdqie" path="res://scenes/user_display.tscn" id="3_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://bfs5f03i0kd8p" path="res://inventory/inv_ui.tscn" id="4_dqkch"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_dqkch"]
 radius = 223.271
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(-3, -3)
 script = ExtResource("1_g2els")
-inventory = ExtResource("2_dqkch")
+inv = ExtResource("2_dqkch")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 rotation = 1.5708
@@ -23,21 +24,21 @@ position = Vector2(4, 17)
 rotation = 1.5708
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(0, -30, 0, -30, -3, -30, -6, -28, -10, -22, -10, -16, -8, -14, -6, -12, -2, -10, -2, -6, -18, -6, -18, -2, -2, -2, -2, 13, -5, 13, -5, 30, -1, 30, -1, 16, 1, 16, 1, 30, 5, 30, 5, 13, 2, 13, 2, -2, 18, -2, 18, -6, 2, -6, 4, -11, 6, -12, 8, -14, 10, -18, 10, -22, 8, -26, 6, -28, 2, -30)
+polygon = PackedVector2Array(1, -34, -1, -34, -3, -33, -9, -30, -12, -24, -13, -18, -10, -13, -7, -10, -3, -9, -5, -9, -21, -10, -21, -2, -9, -2, -2, 13, -10, -2, -10, 30, -1, 30, -1, 16, 1, 16, 1, 30, 12, 30, 13, -1, 2, 13, 13, -1, 22, -2, 22, -8, 5, -8, 6, -10, 8, -11, 11, -15, 12, -19, 12, -23, 11, -27, 9, -30, 5, -33)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 2.0
 one_shot = true
 
-[node name="user_display" parent="." instance=ExtResource("3_qhqgy")]
-offset_left = 11.0
-offset_top = -50.0
-offset_right = 51.0
-offset_bottom = -10.0
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_dqkch")
+
+[node name="Inv_UI" parent="Area2D" instance=ExtResource("4_dqkch")]
+offset_left = -573.0
+offset_top = -187.0
+offset_right = -573.0
+offset_bottom = -187.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

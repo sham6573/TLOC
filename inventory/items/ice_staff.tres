@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://b64ql7bgeybf8"]
+
+[ext_resource type="Script" uid="uid://m2uedcawj28w" path="res://inventory/inventory_item.gd" id="1_fvqgo"]
+[ext_resource type="Texture2D" uid="uid://cx83nsw4d41g0" path="res://assets/sprites/ice_staff.png" id="2_fvqgo"]
+
+[resource]
+script = ExtResource("1_fvqgo")
+name = "ice staff"
+texture = ExtResource("2_fvqgo")
+metadata/_custom_type_script = "uid://m2uedcawj28w"

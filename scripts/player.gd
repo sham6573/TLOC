@@ -1,17 +1,15 @@
 extends CharacterBody2D
 
-const speed: int = 250
+var speed: int = 250
 # constant speed for player
-
-@export var inventory: Inventory
+var health: int = 100
+# player health
+@export var inv: Inv
 # player's inventory
-
 var can_attack: bool = true
 # a control boolean 
-
 signal orb(pos, dir)
 # a signal to commuicate with orb scene to instancate an orb 
-
 signal prompt
 # a signal to emit to create an prompt screen
 
@@ -39,6 +37,3 @@ func check_if_shooting() -> void:
 # runs when timer runs out 
 func _on_timer_timeout() -> void:
 	can_attack = true 
-
-func collect(item):
-	inventory.insert(item)
