@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://bmrvytf6bkpux"]
+[gd_scene load_steps=8 format=4 uid="uid://bmrvytf6bkpux"]
 
 [ext_resource type="Texture2D" uid="uid://b4553lo2scnl7" path="res://assets/sprites/grassorfloor.png" id="1_c4wp1"]
 [ext_resource type="Texture2D" uid="uid://ujolm784y3gd" path="res://assets/sprites/door.png" id="1_fpimf"]
+[ext_resource type="Texture2D" uid="uid://bimlnccgdqtid" path="res://assets/sprites/wall.png" id="3_fpimf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c4wp1"]
 texture = ExtResource("1_c4wp1")
@@ -15,6 +16,10 @@ texture_region_size = Vector2i(128, 128)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 0:0/0/physics_layer_1/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0wj4k"]
+texture = ExtResource("3_fpimf")
+texture_region_size = Vector2i(128, 128)
+
 [sub_resource type="TileSet" id="TileSet_0wj4k"]
 tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
@@ -22,6 +27,7 @@ physics_layer_1/collision_layer = 1
 physics_layer_1/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_c4wp1")
 sources/1 = SubResource("TileSetAtlasSource_fpimf")
+sources/7 = SubResource("TileSetAtlasSource_0wj4k")
 
 [node name="Node2D" type="Node2D"]
 

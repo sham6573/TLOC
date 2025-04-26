@@ -12,6 +12,7 @@ signal orb(pos, dir)
 # a signal to commuicate with orb scene to instancate an orb 
 signal prompt
 # a signal to emit to create an prompt screen
+var hb = preload("res://scripts/health.gd")
 
 func _process(delta: float) -> void:
 	movement(delta)
@@ -37,3 +38,8 @@ func check_if_shooting() -> void:
 # runs when timer runs out 
 func _on_timer_timeout() -> void:
 	can_attack = true 
+
+func _on_inv_ui_selected_item(num) -> void:
+	print(inv.items[num])
+	
+# func player entered type 
